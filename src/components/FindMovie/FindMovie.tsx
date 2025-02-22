@@ -44,7 +44,7 @@ export const FindMovie: React.FC<Props> = ({ movieList, setMovieList }) => {
               .then(foundedMovie => {
                 setMovie(foundedMovie);
               })
-              .finally(setLoading(false));
+              .finally(() => setLoading(false));
           }, 600);
         }}
       >
