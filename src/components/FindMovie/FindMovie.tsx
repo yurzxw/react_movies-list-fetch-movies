@@ -11,13 +11,7 @@ type Props = {
 };
 
 function isAtList(list: Movie[], movie: Movie) {
-  list.map(film => {
-    if (film.imdbId === movie.imdbId) {
-      return true;
-    }
-  });
-
-  return false;
+  return list.some(film => film.imdbId === movie.imdbId);
 }
 
 export const FindMovie: React.FC<Props> = ({ movieList, setMovieList }) => {
